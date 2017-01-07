@@ -18,9 +18,11 @@ public class ScoreDisplay extends AppCompatActivity {
         textView.setText("Congratulations! You have scored " + v + " out of 10!");
     }
 
+    //on home button click
     public void onhomebuttonClick(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
 }
+
