@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">GKQuiz</string>
+    <string-array name="Questions">
+        <item>What is the letter A in the phonetic alphabet?</item>
+        <item>Which is the country with the most people?</item>
+        <item>Which state is the biggest in the US?</item>
+        <item>What is Aurora Borealis commonly known as?</item>
+        <item>Which is the non contagious disease that is the most common in the world?</item>
+        <item>What is the largest mammal in the world?</item>
+        <item>Which is the sport where you could be out \"leg before wicket\" or \"hit a six\"?</item>
+        <item>What is the chemical element corresponding to the symbol Na?</item>
+        <item>Which city will host the 2020 Olympic games?</item>
+        <item>What is the rhino\'s horn made of?</item>
+
+    </string-array>
+    <string-array name="Answers">
+        <item>alpha</item>
+        <item>china</item>
+        <item>alaska</item>
+        <item>northern lights</item>
+        <item>tooth decay</item>
+        <item>blue whale</item>
+        <item>cricket</item>
+        <item>sodium</item>
+        <item>tokyo</item>
+        <item>hair</item>
+    </string-array>
 </resources>
