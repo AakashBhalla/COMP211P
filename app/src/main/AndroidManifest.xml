@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Questions" />
-        <activity android:name=".ScoreDisplay"></activity>
+        <activity android:name=".ScoreDisplay" />
+        <activity android:name=".MultiplayerQuestions" />
+        <activity android:name=".MultiplayerRegister"></activity>
     </application>
 
 </manifest>

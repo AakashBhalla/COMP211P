@@ -11,6 +11,7 @@
         <item>What is the chemical element corresponding to the symbol Na?</item>
         <item>Which city will host the 2020 Olympic games?</item>
         <item>What is the rhino\'s horn made of?</item>
+        <item></item>
 
     </string-array>
     <string-array name="Answers">
@@ -24,5 +25,6 @@
         <item>sodium</item>
         <item>tokyo</item>
         <item>hair</item>
+        <item></item>
     </string-array>
 </resources>

@@ -18,4 +18,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void onmultiplayerbuttonClick (View view) {
+        Intent intent = new Intent(this, MultiplayerRegister.class);
+        startActivity(intent);
+        finish();
+    }
 }
