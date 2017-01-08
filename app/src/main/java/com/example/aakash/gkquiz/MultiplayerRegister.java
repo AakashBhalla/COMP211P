@@ -19,7 +19,7 @@ public class MultiplayerRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_multiplayer_questions);
+        setContentView(R.layout.activity_multiplayer_register);
 
         p1name = (EditText)findViewById(R.id.player1);
         p2name = (EditText)findViewById(R.id.player2);
@@ -31,6 +31,13 @@ public class MultiplayerRegister extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        String p1 = ((EditText) findViewById(R.id.player1)).getText().toString();
+                        String p2 = ((EditText) findViewById(R.id.player2)).getText().toString();
+                        Intent intent = new Intent(v.getContext(), MultiplayerQuestions.class);
+                        intent.putExtra("p1", p1);
+                        intent.putExtra("p2", p2);
+                        v.getContext().startActivity(intent);
+                        finish();
 
                     }
                 }
