@@ -19,7 +19,10 @@
         <activity android:name=".ScoreDisplay" />
         <activity android:name=".MultiplayerQuestions" />
         <activity android:name=".MultiplayerRegister" />
-        <activity android:name=".MultiplayerQuestions2"></activity>
+        <activity android:name=".MultiplayerQuestions2" />
+        <activity android:name=".MultiplayerQuestions3" />
+        <activity android:name=".MultiplayerQuestions4" />
+        <activity android:name=".MultiplayerResults"></activity>
     </application>
 
 </manifest>

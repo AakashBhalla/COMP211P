@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MultiplayerRegister extends AppCompatActivity {
 
-    EditText p1name, p2name;
+    EditText p1, p2;
     Button startbutton;
 
     @Override
@@ -21,8 +21,8 @@ public class MultiplayerRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplayer_register);
 
-        p1name = (EditText)findViewById(R.id.player1);
-        p2name = (EditText)findViewById(R.id.player2);
+        p1 = (EditText)findViewById(R.id.player1);
+        p2 = (EditText)findViewById(R.id.player2);
         startbutton = (Button)findViewById(R.id.mstartbutton);
         addData();
     }

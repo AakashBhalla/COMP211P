@@ -9,23 +9,23 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
-public class MultiplayerQuestions2 extends AppCompatActivity implements View.OnClickListener{
+public class MultiplayerQuestions4 extends AppCompatActivity implements View.OnClickListener{
 
     private boolean done;
     private int QuestionNo;
-    public int p1score=0;
+    public int p2score=0;
     String p1, p2;
+    int p1score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_multiplayer_questions2);
+        setContentView(R.layout.activity_multiplayer_questions4);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             p1 = extras.getString("p1");
             p2 = extras.getString("p2");
+            p1score = extras.getInt("p1score");
             final String[] questions = getResources().getStringArray(R.array.Questions);
             TextView t = (TextView) findViewById(R.id.question);
             t.setText(questions[QuestionNo]);
@@ -61,10 +61,11 @@ public class MultiplayerQuestions2 extends AppCompatActivity implements View.OnC
                     NextButton.setText("Finish");
                     SkipButton.setText("Skip & Finish");
 
-                    Intent intent = new Intent(MultiplayerQuestions2.this, MultiplayerQuestions3.class);
+                    Intent intent = new Intent(MultiplayerQuestions4.this, MultiplayerResults.class);
                     intent.putExtra("p1", p1);
                     intent.putExtra("p2", p2);
                     intent.putExtra("p1score", p1score);
+                    intent.putExtra("p2score", p2score);
                     startActivity(intent);
                     return;
                 }
@@ -96,10 +97,11 @@ public class MultiplayerQuestions2 extends AppCompatActivity implements View.OnC
                     NextButton.setVisibility(View.INVISIBLE);
                     SkipButton.setVisibility(View.INVISIBLE);
 
-                    Intent intent = new Intent(MultiplayerQuestions2.this, MultiplayerQuestions3.class);
+                    Intent intent = new Intent(MultiplayerQuestions4.this, MultiplayerResults.class);
                     intent.putExtra("p1", p1);
                     intent.putExtra("p2", p2);
                     intent.putExtra("p1score", p1score);
+                    intent.putExtra("p2score", p2score);
                     startActivity(intent);
                     return;
                 }
@@ -133,4 +135,3 @@ public class MultiplayerQuestions2 extends AppCompatActivity implements View.OnC
         }
     }
 }
-
