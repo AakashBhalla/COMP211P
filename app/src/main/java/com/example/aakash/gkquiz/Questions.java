@@ -17,11 +17,16 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
     private int QuestionNo;
     public int score=0;
     private int i;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            name = extras.getString("name");
+
         final String[] questions = getResources().getStringArray(R.array.Questions);
         TextView t = (TextView) findViewById(R.id.question);
         t.setText(questions[QuestionNo]);
@@ -61,7 +66,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
                 }
             });
 
-    }}
+    }}}
 
         public void onClick(View v) {
 
@@ -87,6 +92,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
 
                     Intent intent = new Intent(Questions.this, ScoreDisplay.class);
                     intent.putExtra("Score", score);
+                    intent.putExtra("name", name);
                     startActivity(intent);
                     return;
                 }
@@ -120,6 +126,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
 
                         Intent intent = new Intent(Questions.this, ScoreDisplay.class);
                         intent.putExtra("Score", score);
+                        intent.putExtra("name", name);
                         startActivity(intent);
                         return;
                     }

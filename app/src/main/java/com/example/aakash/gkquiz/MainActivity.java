@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.home_page);
     }
 
-    public void onstartbuttonClick(View view) {
-        Intent intent = new Intent(this, Questions.class);
+    public void onregisterbuttonClick(View view) {
+        Intent intent = new Intent(this, Register.class);
         startActivity(intent);
         finish();
     }

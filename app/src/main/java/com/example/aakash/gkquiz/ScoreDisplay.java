@@ -8,14 +8,22 @@ import android.widget.TextView;
 
 public class ScoreDisplay extends AppCompatActivity {
 
+    String name;
+    int score;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_display);
 
-        int v = (getIntent().getExtras().getInt("Score")) ;
-        TextView textView = (TextView) findViewById(R.id.QuizComplete);
-        textView.setText("Congratulations! You have scored " + v + " out of 10!");
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            name = extras.getString("name");
+            score = extras.getInt("Score");
+
+            TextView textView = (TextView) findViewById(R.id.QuizComplete);
+            textView.setText("Congratulations " + name + "! You have scored " + score + " out of 10!");
+        }
     }
 
     //on home button click
