@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_score_board"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="64dp"
-    android:paddingRight="64dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#A1A9DE"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#A1A9DE"
-    tools:context="com.example.aakash.gkquiz.MainActivity">
+    tools:context="com.example.aakash.gkquiz.ScoreBoard">
+
+    <TextView
+        android:text="Top 5 High Scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-thin"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="#000000"
-        android:text="General Knowledge Quiz" />
+        android:id="@+id/ScoreDisplay"/>
 
     <Button
-        android:text="REGISTER"
+        android:text="HOME"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onregisterbuttonClick"
-        android:id="@+id/registerbutton" />
-
-    <Button
-        android:text="MULTIPLAYER"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onmultiplayerbuttonClick"
-        android:id="@+id/multiplayerbutton" />
-
-    <Button
-        android:text="SCOREBOARD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onscoreboardbuttonClick"
-        android:id="@+id/scoreboardbutton"/>
+        android:onClick="onhomebuttonClick"
+        android:id="@+id/homebutton" />
 </LinearLayout>

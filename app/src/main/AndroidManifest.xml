@@ -23,7 +23,8 @@
         <activity android:name=".MultiplayerQuestions3" />
         <activity android:name=".MultiplayerQuestions4" />
         <activity android:name=".MultiplayerResults" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".ScoreBoard"></activity>
     </application>
 
 </manifest>

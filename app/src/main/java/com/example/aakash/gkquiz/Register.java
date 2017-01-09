@@ -28,7 +28,7 @@ public class Register extends AppCompatActivity {
                     public void onClick(View v) {
                         String name = ((EditText) findViewById(R.id.playername)).getText().toString();
                         Intent intent = new Intent(v.getContext(), Questions.class);
-                        intent.putExtra("name", name);
+                        intent.putExtra(Constants.CURRENT_NAME, name);
                         v.getContext().startActivity(intent);
                         finish();
 

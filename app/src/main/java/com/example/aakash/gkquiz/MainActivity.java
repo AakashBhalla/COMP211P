@@ -24,4 +24,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void onscoreboardbuttonClick (View view) {
+        Intent intent = new Intent(this, ScoreBoard.class);
+        startActivity(intent);
+        finish();
+    }
 }
