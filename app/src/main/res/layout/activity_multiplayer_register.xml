@@ -29,10 +29,10 @@
         android:layout_height="wrap_content"
         android:background="#9775AA"
         android:inputType="textPersonName|textCapWords|textNoSuggestions"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:textSize="20dip"
         android:layout_margin="10dp"
         android:gravity="center"
+        android:imeOptions="actionDone"
         android:id="@+id/player1" />
 
 
@@ -41,10 +41,10 @@
         android:layout_height="wrap_content"
         android:background="#9775AA"
         android:inputType="textPersonName|textCapWords|textNoSuggestions"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:textSize="20dip"
         android:layout_margin="10dp"
         android:gravity="center"
+        android:imeOptions="actionDone"
         android:id="@+id/player2" />
 
 

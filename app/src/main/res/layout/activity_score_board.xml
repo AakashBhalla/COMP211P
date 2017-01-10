@@ -39,4 +39,11 @@
         android:layout_height="wrap_content"
         android:onClick="onhomebuttonClick"
         android:id="@+id/homebutton" />
+
+    <Button
+        android:text="CLEAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onclearbuttonClick"
+        android:id="@+id/clearbutton" />
 </LinearLayout>

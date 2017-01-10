@@ -94,7 +94,6 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
             final String[] questions = getResources().getStringArray(R.array.Questions);
             switch (v.getId()) {
                 case R.id.NextButton:
-                    score = score + 1;
                     if (nextButton.getText().equals((FINISH_TAG))){
                         endGame();
                     }
@@ -186,6 +185,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
         answer = answer.toUpperCase();
 
         if (answer.equals(correctanswer)) {
+            score = score + 1;
             Toast toasty = Toast.makeText(getApplicationContext(), "Right!", Toast.LENGTH_SHORT);
             toasty.show();
             nextButton.setVisibility(View.VISIBLE);
@@ -199,7 +199,5 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
             toasty.show();
         }
     }
-
-
 
 }

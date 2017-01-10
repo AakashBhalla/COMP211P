@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
@@ -27,10 +28,26 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String name = ((EditText) findViewById(R.id.playername)).getText().toString();
-                        Intent intent = new Intent(v.getContext(), Questions.class);
-                        intent.putExtra(Constants.CURRENT_NAME, name);
-                        v.getContext().startActivity(intent);
-                        finish();
+                        name = name.trim();
+
+                        if (name.contains("1") ||name.contains("2") ||name.contains("3") ||name.contains("4") ||name.contains("5") ||name.contains("6") ||name.contains("7") ||name.contains("8") ||name.contains("9")) {
+                            Toast toasty = Toast.makeText(getApplicationContext(), "Your name can't contain numbers!", Toast.LENGTH_LONG);
+                            toasty.show();
+                            return;
+                        }
+
+                        if (name.isEmpty()) {
+                            Toast toasty = Toast.makeText(getApplicationContext(), "Enter your name!", Toast.LENGTH_LONG);
+                            toasty.show();
+                            return;
+                        }
+
+                        else {
+                            Intent intent = new Intent(v.getContext(), Questions.class);
+                            intent.putExtra(Constants.CURRENT_NAME, name);
+                            v.getContext().startActivity(intent);
+                            finish();
+                        }
 
                     }
                 }

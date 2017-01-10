@@ -1,5 +1,6 @@
 package com.example.aakash.gkquiz;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.util.ArraySet;
 
@@ -47,6 +48,4 @@ public class LeaderBoardUtil {
         edit.putStringSet(Constants.HIGH_SCORE, results);
         edit.commit();
     }
-
-
 }

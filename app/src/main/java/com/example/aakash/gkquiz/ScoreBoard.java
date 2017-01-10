@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static com.example.aakash.gkquiz.LeaderBoardUtil.*;
+
 public class ScoreBoard extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class ScoreBoard extends AppCompatActivity {
         TextView ScoreDisplay = (TextView) findViewById(R.id.ScoreDisplay);
         SharedPreferences sp = this.getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
 
-        HighScore[] highScores = LeaderBoardUtil.getHighScores(sp);
+        HighScore[] highScores = getHighScores(sp);
         for (int i=0; i<5; i++){
             HighScore score = highScores[i];
             if (score!= null){
@@ -31,5 +33,13 @@ public class ScoreBoard extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void onclearbuttonClick(View view) {
+       SharedPreferences sp = this.getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+        clearHighScores(sp);
+        TextView ScoreDisplay = (TextView) findViewById(R.id.ScoreDisplay);
+        ScoreDisplay.setText(" ");
+
     }
 }
