@@ -113,7 +113,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
                 case R.id.CheatButton:
                     markCurrentQuestionCheat();
                     String[] hints = getResources().getStringArray(R.array.Answers);
-                    Toast toasty = Toast.makeText(getApplicationContext(), hints[currentQuestionNum], Toast.LENGTH_SHORT);
+                    Toast toasty = Toast.makeText(getApplicationContext(), hints[currentQuestionNum], Toast.LENGTH_LONG);
                     toasty.show();
                     ansBox.setVisibility(View.INVISIBLE);
             }

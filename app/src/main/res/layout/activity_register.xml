@@ -33,6 +33,7 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:id="@+id/playername"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567"
         android:imeOptions="actionDone"
         android:maxLines="1"/>
 

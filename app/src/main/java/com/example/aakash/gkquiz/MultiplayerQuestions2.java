@@ -113,7 +113,7 @@ public class MultiplayerQuestions2 extends AppCompatActivity implements View.OnC
             case R.id.CheatButton:
                 markCurrentQuestionCheat();
                 String[] hints = getResources().getStringArray(R.array.Answers);
-                Toast toasty = Toast.makeText(getApplicationContext(), hints[currentQuestionNum], Toast.LENGTH_SHORT);
+                Toast toasty = Toast.makeText(getApplicationContext(), hints[currentQuestionNum], Toast.LENGTH_LONG);
                 toasty.show();
                 ansBox.setVisibility(View.INVISIBLE);
         }
@@ -165,7 +165,7 @@ public class MultiplayerQuestions2 extends AppCompatActivity implements View.OnC
 
     private void endGame() {
         Intent intent = new Intent(MultiplayerQuestions2.this, MultiplayerQuestions3.class);
-        intent.putExtra(Constants.CURRENT_SCORE, p1score);
+        intent.putExtra("p1score", p1score);
         intent.putExtra("p1", p1);
         intent.putExtra("p2", p2);
         startActivity(intent);

@@ -25,15 +25,18 @@ public class MultiplayerResults extends AppCompatActivity {
 
             TextView textView = (TextView) findViewById(R.id.QuizComplete);
             if (p1score < p2score) {
-                textView.setText(p1 + " scored " + p1score + " & " + p2 + " scored " + p2score + "." + p2 + " is the winner!");
+                textView.setText(p1 + " scored " + p1score + " & " + p2 + " scored " + p2score + ". " + p2 + " is the winner!");
+                textView.setTextSize(35);
             }
 
             if (p1score > p2score) {
-                textView.setText(p1 + " scored " + p1score + " & " + p2 + " scored " + p2score + "." + p1 + " is the winner!");
+                textView.setText(p1 + " scored " + p1score + " & " + p2 + " scored " + p2score + ". " + p1 + " is the winner!");
+                textView.setTextSize(35);
             }
 
             if (p1score == p2score) {
                 textView.setText(p1 + " scored " + p1score + " & " + p2 + " scored " + p2score + ". It's a tie!");
+                textView.setTextSize(35);
             }
         }
     }

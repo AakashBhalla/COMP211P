@@ -115,7 +115,7 @@ public class MultiplayerQuestions4 extends AppCompatActivity implements View.OnC
             case R.id.CheatButton:
                 markCurrentQuestionCheat();
                 String[] hints = getResources().getStringArray(R.array.Answers);
-                Toast toasty = Toast.makeText(getApplicationContext(), hints[currentQuestionNum], Toast.LENGTH_SHORT);
+                Toast toasty = Toast.makeText(getApplicationContext(), hints[currentQuestionNum], Toast.LENGTH_LONG);
                 toasty.show();
                 ansBox.setVisibility(View.INVISIBLE);
         }

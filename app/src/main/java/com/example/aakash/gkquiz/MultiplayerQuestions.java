@@ -11,9 +11,6 @@ import android.widget.Toast;
 
 public class MultiplayerQuestions extends AppCompatActivity {
 
-    private int QuestionNo;
-    public int p1score;
-    private int i;
     String p1, p2;
 
     @Override
